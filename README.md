@@ -4,7 +4,7 @@ CompTIA A+ certified, working towards CompTIA Network+.
 
 # homelab-docs
 
-Hands-on IT & security homelab documentation — building toward CCNA/Security+ 
+Hands-on IT & security homelab documentation — building toward Network+/Security+ 
 and eventually AI security / ethical hacking work.
 
 ## Contents
