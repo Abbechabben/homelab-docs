@@ -25,15 +25,19 @@
 * Wired up the PSU: 24-pin main power, CPU power, PCIe power, and SATA power cables.
 * Seated each power cable in its correct connector on the motherboard: 24-pin main power to the 24-pin connector, CPU power to EATX12V, and 2x SATA power to the SSDs at the back of the chassis.
 
+
 ### 2. First boot attempt
 Expected a splash screen prompting "Press DEL or F2 to enter BIOS" — instead, nothing displayed.
 
-Checked the CPU spec sheet and confirmed the Ryzen 5 5500 has no integrated graphics, which explained the blank screen since I'd plugged the HDMI cable into the motherboard with no GPU installed.
+Checked the CPU spec sheet and confirmed the Ryzen 5 5500 has **no integrated graphics**, which explained the blank screen since I'd plugged the HDMI cable into the motherboard with no GPU installed.
 
-* Installed a GTX 1050 Ti in a PCIe slot and connected its PCIe power cable, then tried again — still no display.
+* **Installed a GTX 1050 Ti** in a PCIe slot and connected its PCIe power cable, then tried again — still no display.
 * All the motherboard lighting came on, so I assumed it would work now that a GPU was installed, but it still didn't. My Steelseries mouse and Xtrfy keyboard didn't light up when plugged in, but a different mouse/keyboard (Mission SG) did. I initially suspected a power delivery issue, or that the motherboard itself was dead (it had been stored poorly for years).
-* On closer inspection, the POST diagnostic LEDs weren't lighting up at all when powering on — meaning POST wasn't even starting. This still pointed toward a dead motherboard, since every power cable was seated correctly, the CPU was seated properly, and the board was clearly receiving power (lights on, confirming the PSU was fine).
-* Further research turned up the actual cause: the Ryzen 5 5500 wasn't supported by the board's old BIOS firmware, which prevented BIOS from initializing — hence no POST and no diagnostic LEDs.
+* On closer inspection, the **POST diagnostic LEDs weren't lighting up at all** when powering on — meaning POST wasn't even starting. This still pointed toward a dead motherboard, since every power cable was seated correctly, the CPU was seated properly, and the board was clearly receiving power (lights on, confirming the PSU was fine).
+* Further research turned up the actual cause: the **Ryzen 5 5500 wasn't supported by the board's old BIOS firmware**, which prevented BIOS from initializing — hence no POST and no diagnostic LEDs.
+
+#### **Root cause**: 
+* AGESA/BIOS version too old to recognize the Ryzen 5 5500 CPU → no POST, no diagnostic LEDs, no boot
 
 **Possible fixes:**
 1. **BIOS flashback** — not supported on this motherboard.
