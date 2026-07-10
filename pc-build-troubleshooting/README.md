@@ -1,5 +1,5 @@
 # PC Build
-- Goal: To get the computer started and get into the BIOS to in another lab be able to setup an OS
+- Goal: Get the computer started and get into the BIOS so I, in another lab be able to setup an OS
 
 ## Components (initial, will become more the longer further down the lab we go...)
 * CPU: AMD Ryzen 5 5500
