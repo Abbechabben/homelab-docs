@@ -1,6 +1,6 @@
 ## About me
 
-CompTIA A+ certified, working towards CompTIA Network+. 
+CompTIA A+ certified, working towards CCNA
 
 # homelab-docs
 
